@@ -9,7 +9,7 @@
     "prod:client": "NODE_ENV=production ./node_modules/.bin/webpack",
     "dev:server": "NODE_ENV=development nodemon index.js",
     "test:server": "NODE_ENV=test ./node_modules/.bin/mocha ./server/tests/*",
-    "start": "node index.js"
+    "start": "npm run prod:client && node index.js"
   },
   "dependencies": {
     "babel-core": "^6.25.0",
