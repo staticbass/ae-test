@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 const config = {
-  entry: ['whatwg-fetch', './client/app.js'],
+  entry: ['babel-polyfill', 'whatwg-fetch', './client/app.js'],
   watch: !isProd,
   output: {
     path: path.resolve('public'),
